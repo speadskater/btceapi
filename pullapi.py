@@ -127,12 +127,12 @@ def main():
         avs += [askvalue]
         bvs += [bidvalue]
         if len(aps)>100:
-            del aps[-1]
-            del aqs[-1]
-            del bps[-1]
-            del bqs[-1]
-            del avs[-1]
-            del bvs[-1]
+            aps = aps[0:99]
+            aqs = aqs[0:99]
+            bps = bps[0:99]
+            bqs = bqs[0:99]
+            avs = avs[0:99]
+            bvs = bvs[0:99]
         print("At ", today)
         print("Buy at", askprice[0]," Dollars", ", You can buy up to", askvalue[0], " BTC")
         print("Sell at", bidprice[0], " Dollars",", You can sell up to", bidvalue[0], " BTC")
